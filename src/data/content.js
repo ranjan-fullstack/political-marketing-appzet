@@ -4,8 +4,6 @@ import {
   Palette,
   MessageCircle,
   BarChart3,
-  Trophy,
-  MapPin,
   Target,
   LineChart,
   Share2,
@@ -22,6 +20,7 @@ import {
 export const navLinks = [
   { label: 'Home', href: '#home' },
   { label: 'About Us', href: '#about' },
+  { label: 'Parties', href: '#parties' },
   { label: 'Services', href: '#services' },
   { label: 'Our Work', href: '#work' },
   { label: 'Insights', href: '#insights' },
@@ -29,18 +28,22 @@ export const navLinks = [
 ]
 
 export const heroFeatures = [
-  { icon: Users, label: 'Voter Research' },
-  { icon: Megaphone, label: 'Digital Campaigns' },
-  { icon: Palette, label: 'Creative Content' },
-  { icon: MessageCircle, label: 'WhatsApp & SMS Outreach' },
-  { icon: BarChart3, label: 'Ground Support & Analytics' },
+  { icon: Users, label: 'Voter Research', color: 'bg-green-700' },
+  { icon: Megaphone, label: 'Digital Campaigns', color: 'bg-orange-500' },
+  { icon: Palette, label: 'Creative Content', color: 'bg-purple-500' },
+  { icon: MessageCircle, label: 'WhatsApp & SMS Outreach', color: 'bg-blue-500' },
+  { icon: BarChart3, label: 'Ground Support & Analytics', color: 'bg-red-500' },
 ]
 
-export const heroStats = [
-  { icon: Trophy, value: '50+', label: 'Campaigns' },
-  { icon: Users, value: '100+', label: 'Leaders Supported' },
-  { icon: MapPin, value: 'All 30', label: 'Districts of Odisha' },
-  { icon: Target, value: 'Proven', label: 'Results' },
+export const parties = [
+  { symbol: '🐚', name: 'BJD', full: 'Biju Janata Dal' },
+  { symbol: '🪷', name: 'BJP', full: 'Bharatiya Janata Party' },
+  { symbol: '✋', name: 'INC', full: 'Indian National Congress' },
+  { symbol: '🧹', name: 'AAP', full: 'Aam Aadmi Party' },
+  { symbol: '🌾', name: 'CPI', full: 'Communist Party of India' },
+  { symbol: '☭', name: 'CPI(M)', full: 'Communist Party of India (Marxist)' },
+  { symbol: '🏹', name: 'JD(U)', full: 'Janata Dal (United)' },
+  { symbol: '⏰', name: 'NCP', full: 'Nationalist Congress Party' },
 ]
 
 export const aboutPoints = [

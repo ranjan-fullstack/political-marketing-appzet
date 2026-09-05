@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import MenuPanel from './components/MenuPanel'
 import QuickNav from './components/QuickNav'
 import Hero from './components/Hero'
+import Parties from './components/Parties'
 import About from './components/About'
 import Services from './components/Services'
 import OurWork from './components/OurWork'
@@ -53,6 +54,7 @@ function App() {
 
       <main>
         <Hero />
+        <Parties />
         <About />
         <Services />
         <OurWork />
