@@ -1,4 +1,5 @@
 import { navLinks, services } from '../data/content'
+import Logo from './Logo'
 
 function XIcon(props) {
   return (
@@ -26,22 +27,13 @@ function InstagramIcon(props) {
 
 export default function Footer() {
   return (
-    <footer className="bg-green-950 pt-16">
+    <footer className="relative overflow-hidden bg-linear-to-b from-purple-950 to-green-950 pt-16">
+      <div className="gradient-bg-anim absolute inset-x-0 top-0 h-1 bg-linear-to-r from-gold-400 via-pink-500 to-sky-400" />
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="grid gap-12 border-b border-white/10 pb-12 lg:grid-cols-[1.3fr_1fr_1fr]">
           <div>
-            <a href="#home" className="flex items-center gap-3">
-              <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-gold-500 font-heading text-xl font-extrabold text-green-950">
-                A
-              </span>
-              <span className="flex flex-col leading-tight">
-                <span className="font-heading text-base font-bold text-white">
-                  Appzet Political Marketing Agency
-                </span>
-                <span className="text-[11px] font-medium tracking-wide text-gold-300/80">
-                  Strategy | Communication | Impact
-                </span>
-              </span>
+            <a href="#home" aria-label="Appzet Political Marketing Agency – home">
+              <Logo />
             </a>
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-white/50">
               Strategic, data-driven and result-oriented political campaign

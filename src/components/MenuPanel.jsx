@@ -1,5 +1,6 @@
 import { X } from 'lucide-react'
 import { navLinks } from '../data/content'
+import Logo from './Logo'
 
 function XSocialIcon(props) {
   return (
@@ -41,9 +42,7 @@ export default function MenuPanel({ open, onClose, activeSection, onNavigate }) 
         }`}
       >
         <div className="flex items-center justify-between">
-          <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-gold-500 font-heading text-base font-extrabold text-green-950">
-            A
-          </span>
+          <Logo compact size="sm" />
           <button
             type="button"
             onClick={onClose}

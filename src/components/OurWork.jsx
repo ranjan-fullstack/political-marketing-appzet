@@ -2,6 +2,12 @@ import { ArrowUpRight } from 'lucide-react'
 import { workItems } from '../data/content'
 import Reveal from './Reveal'
 
+const grads = [
+  'from-fuchsia-600 via-purple-700 to-indigo-800',
+  'from-orange-500 via-rose-600 to-pink-700',
+  'from-emerald-500 via-teal-600 to-cyan-700',
+]
+
 export default function OurWork() {
   return (
     <section id="work" className="bg-white py-20 sm:py-28">
@@ -20,7 +26,7 @@ export default function OurWork() {
             <Reveal
               key={title}
               delay={i * 100}
-              className="group relative overflow-hidden rounded-2xl bg-green-950 p-7"
+              className={`group relative overflow-hidden gradient-bg-anim rounded-2xl bg-linear-to-br ${grads[i % 3]} p-7 transition-transform duration-300 hover:-translate-y-2`}
             >
               <div
                 className="pointer-events-none absolute inset-0 opacity-70 transition-opacity group-hover:opacity-100"
@@ -30,7 +36,7 @@ export default function OurWork() {
                 }}
               />
               <div className="relative flex items-start justify-between">
-                <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-gold-500/15">
+                <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/20">
                   <Icon className="h-5 w-5 text-gold-400" />
                 </span>
                 <ArrowUpRight className="h-5 w-5 text-white/30 transition-colors group-hover:text-gold-400" />

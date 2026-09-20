@@ -1,9 +1,21 @@
 import { parties } from '../data/content'
 import Reveal from './Reveal'
 
+// Brand-inspired colour pairs per party (same order as `parties` in content.js).
+const colors = [
+  ['#16a34a', '#86efac'], // BJD
+  ['#ff7a00', '#ffd23f'], // BJP
+  ['#0ea5e9', '#6366f1'], // INC
+  ['#0284c7', '#22d3ee'], // AAP
+  ['#ef4444', '#fb923c'], // CPI
+  ['#dc2626', '#f43f5e'], // CPI(M)
+  ['#15803d', '#a3e635'], // JD(U)
+  ['#0d9488', '#38bdf8'], // NCP
+]
+
 export default function Parties() {
   return (
-    <section id="parties" className="bg-[#F7FAF8] pb-20 pt-14 sm:pb-28 sm:pt-16">
+    <section id="parties" className="bg-linear-to-b from-[#F7FAF8] to-pink-50 pb-20 pt-14 sm:pb-28 sm:pt-16">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <Reveal className="mx-auto max-w-2xl text-center">
           <span className="section-eyebrow text-xs font-semibold uppercase text-green-700">
@@ -20,20 +32,20 @@ export default function Parties() {
 
         <div className="mt-12 grid grid-cols-4 gap-4 sm:gap-6 md:grid-cols-8">
           {parties.map(({ symbol, name, full }, i) => (
-            <Reveal
-              key={name}
-              delay={i * 60}
-              className="flex flex-col items-center gap-3 rounded-2xl border border-green-900/10 bg-white p-4 text-center shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg sm:p-5"
-            >
-              <span
-                className="flex h-14 w-14 items-center justify-center rounded-full bg-green-950/5 text-2xl sm:h-16 sm:w-16 sm:text-3xl"
-                title={full}
+            <Reveal key={name} delay={i * 60}>
+              <div
+                className="party-card group flex flex-col items-center gap-3 rounded-2xl border border-black/5 bg-white p-4 text-center shadow-sm sm:p-5"
+                style={{ '--c1': colors[i % 8][0], '--c2': colors[i % 8][1], '--i': i }}
               >
-                {symbol}
-              </span>
-              <span className="text-xs font-bold text-ink-900 sm:text-sm">
-                {name}
-              </span>
+                <span className="party-badge relative flex h-14 w-14 items-center justify-center sm:h-16 sm:w-16" title={full}>
+                  <span className="party-ring absolute -inset-[3px] rounded-full" aria-hidden="true" />
+                  <span className="party-glow absolute -inset-1 rounded-full blur-md" aria-hidden="true" />
+                  <span className="party-face relative flex h-full w-full items-center justify-center rounded-full bg-white text-2xl sm:text-3xl">
+                    <span className="party-symbol">{symbol}</span>
+                  </span>
+                </span>
+                <span className="party-name text-xs font-bold sm:text-sm">{name}</span>
+              </div>
             </Reveal>
           ))}
         </div>

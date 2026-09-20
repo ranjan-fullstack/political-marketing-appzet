@@ -11,14 +11,16 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="bg-green-950 py-20 sm:py-28">
-      <div className="mx-auto grid max-w-7xl gap-14 px-5 sm:px-8 lg:grid-cols-2 lg:gap-20">
+    <section id="contact" className="relative overflow-hidden bg-linear-to-br from-green-950 via-indigo-950 to-purple-950 py-20 sm:py-28">
+      <div className="blob animate-float-slow -left-20 top-0 h-80 w-80 bg-fuchsia-500/25" />
+      <div className="blob animate-float-alt bottom-0 right-0 h-96 w-96 bg-orange-500/20" />
+      <div className="relative mx-auto grid max-w-7xl gap-14 px-5 sm:px-8 lg:grid-cols-2 lg:gap-20">
         <Reveal>
           <span className="section-eyebrow text-xs font-semibold uppercase text-gold-300">
             Get In Touch
           </span>
           <h2 className="mt-3 text-balance font-heading text-3xl font-extrabold text-white sm:text-4xl">
-            Let&apos;s Build Your Next Campaign Strategy
+            Let&apos;s Build Your Next <span className="gradient-text-anim">Campaign Strategy</span>
           </h2>
           <p className="mt-4 max-w-md text-base text-white/60">
             Tell us about your constituency and timeline — our strategy team
@@ -129,7 +131,7 @@ export default function Contact() {
               </div>
               <button
                 type="submit"
-                className="flex w-full items-center justify-center gap-2 rounded-full bg-gold-500 px-6 py-3 text-sm font-bold text-green-950 transition-colors hover:bg-gold-400"
+                className="flex w-full items-center justify-center gap-2 shine-btn gradient-bg-anim rounded-full bg-linear-to-r from-gold-400 via-orange-400 to-pink-500 px-6 py-3 text-sm font-bold text-green-950 shadow-lg shadow-orange-500/30 transition-transform hover:-translate-y-0.5"
               >
                 Get a Free Consultation
                 <span aria-hidden>&rarr;</span>

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Menu } from 'lucide-react'
 import { navLinks } from '../data/content'
+import Logo from './Logo'
 
 export default function Navbar({ onOpenMenu, activeSection }) {
   const [scrolled, setScrolled] = useState(false)
@@ -19,18 +20,8 @@ export default function Navbar({ onOpenMenu, activeSection }) {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-5 py-3.5 sm:px-8">
-        <a href="#home" className="flex items-center gap-3">
-          <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-gold-500 font-heading text-xl font-extrabold text-green-950">
-            A
-          </span>
-          <span className="flex flex-col leading-tight">
-            <span className="font-heading text-base font-bold text-white sm:text-lg">
-              Appzet Political Marketing Agency
-            </span>
-            <span className="text-[11px] font-medium tracking-wide text-gold-300/80">
-              Strategy | Communication | Impact
-            </span>
-          </span>
+        <a href="#home" aria-label="Appzet Political Marketing Agency – home">
+          <Logo />
         </a>
 
         <nav className="hidden items-center gap-7 lg:flex">

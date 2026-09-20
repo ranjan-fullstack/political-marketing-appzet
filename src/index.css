@@ -92,3 +92,165 @@ h4 {
     transition: none;
   }
 }
+
+/* ---------- Colourful motion ---------- */
+@keyframes float-slow {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(30px, -40px, 0) scale(1.15); }
+}
+@keyframes float-alt {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1.1); }
+  50% { transform: translate3d(-40px, 30px, 0) scale(0.95); }
+}
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@keyframes pulse-ring {
+  0% { transform: scale(0.9); opacity: 0.7; }
+  100% { transform: scale(1.9); opacity: 0; }
+}
+@keyframes bob {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-14px) rotate(6deg); }
+}
+@keyframes shine {
+  from { transform: translateX(-120%) skewX(-20deg); }
+  to { transform: translateX(320%) skewX(-20deg); }
+}
+
+.blob { position: absolute; border-radius: 9999px; filter: blur(70px); pointer-events: none; }
+.animate-float-slow { animation: float-slow 11s ease-in-out infinite; }
+.animate-float-alt { animation: float-alt 13s ease-in-out infinite; }
+.animate-bob { animation: bob 5s ease-in-out infinite; }
+.animate-pulse-ring { animation: pulse-ring 2s ease-out infinite; }
+
+.gradient-text-anim {
+  background-image: linear-gradient(90deg, #fada6b, #f2b705, #ff7a45, #ff4d8d, #a78bfa, #38bdf8, #fada6b);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradient-shift 8s ease infinite;
+}
+.gradient-bg-anim {
+  background-size: 250% 250%;
+  animation: gradient-shift 10s ease infinite;
+}
+.shine-btn { position: relative; overflow: hidden; }
+.shine-btn::after {
+  content: "";
+  position: absolute; top: 0; bottom: 0; left: 0; width: 35%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.55), transparent);
+  animation: shine 3.2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float-slow, .animate-float-alt, .animate-bob, .animate-pulse-ring,
+  .gradient-text-anim, .gradient-bg-anim, .shine-btn::after { animation: none; }
+}
+
+/* ---------- Animated logo ---------- */
+@keyframes logo-spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes logo-pulse {
+  0%, 100% { opacity: 0.45; transform: scale(1); }
+  50% { opacity: 0.9; transform: scale(1.12); }
+}
+@keyframes logo-hue {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 300% 50%; }
+}
+@keyframes logo-sweep {
+  0%, 60% { transform: translateX(-160%) skewX(-20deg); }
+  100% { transform: translateX(360%) skewX(-20deg); }
+}
+
+.logo-mark { transition: transform 0.3s ease; }
+.logo-mark:hover { transform: scale(1.08) rotate(-4deg); }
+
+.logo-ring {
+  background: conic-gradient(from 0deg, #f6c92e, #ff7a45, #ff4d8d, #a78bfa, #38bdf8, #34d399, #f6c92e);
+  animation: logo-spin 4s linear infinite;
+}
+.logo-glow {
+  background: conic-gradient(from 0deg, #f6c92e, #ff4d8d, #38bdf8, #f6c92e);
+  animation: logo-pulse 3s ease-in-out infinite;
+}
+.logo-letter {
+  background-image: linear-gradient(90deg, #fada6b, #ff7a45, #ff4d8d, #a78bfa, #38bdf8, #fada6b);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: logo-hue 5s linear infinite;
+}
+.logo-shine {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.45), transparent);
+  animation: logo-sweep 4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo-ring, .logo-glow, .logo-letter, .logo-shine { animation: none; }
+  .logo-mark:hover { transform: none; }
+}
+
+/* ---------- Party cards ---------- */
+@keyframes party-spin { to { transform: rotate(360deg); } }
+@keyframes party-pulse {
+  0%, 100% { opacity: 0.35; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.15); }
+}
+@keyframes party-float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-4px) rotate(-6deg); }
+}
+@keyframes party-wiggle {
+  0%, 100% { transform: rotate(0deg) scale(1.2); }
+  25% { transform: rotate(-14deg) scale(1.3); }
+  75% { transform: rotate(14deg) scale(1.3); }
+}
+
+.party-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.party-card::after {
+  content: "";
+  position: absolute; inset-inline: 0; bottom: 0; height: 4px;
+  background: linear-gradient(90deg, var(--c1), var(--c2), var(--c1));
+  background-size: 200% 100%;
+  animation: gradient-shift 4s linear infinite;
+}
+.party-card:hover {
+  transform: translateY(-8px) scale(1.05);
+  border-color: var(--c1);
+  box-shadow: 0 18px 36px -12px var(--c1);
+}
+.party-ring {
+  background: conic-gradient(from 0deg, var(--c1), var(--c2), var(--c1));
+  animation: party-spin 3.5s linear infinite;
+}
+.party-glow {
+  background: radial-gradient(circle, var(--c1), var(--c2));
+  animation: party-pulse 3s ease-in-out infinite;
+  animation-delay: calc(var(--i) * 0.3s);
+}
+.party-symbol {
+  display: inline-block;
+  animation: party-float 4s ease-in-out infinite;
+  animation-delay: calc(var(--i) * 0.25s);
+}
+.party-card:hover .party-symbol { animation: party-wiggle 0.7s ease-in-out infinite; }
+.party-card:hover .party-ring { animation-duration: 1.2s; }
+.party-name { color: var(--color-ink-900); transition: color 0.3s; }
+.party-card:hover .party-name { color: var(--c1); }
+
+@media (prefers-reduced-motion: reduce) {
+  .party-card::after, .party-ring, .party-glow, .party-symbol,
+  .party-card:hover .party-symbol { animation: none; }
+  .party-card:hover { transform: none; }
+}

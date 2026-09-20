@@ -18,15 +18,21 @@ export default function Hero() {
           <div className="absolute inset-0 bg-linear-to-r from-green-950 via-green-950/80 to-green-950/20 sm:via-green-950/75 sm:to-green-950/10" />
         </div>
 
+        <div className="blob animate-float-slow -left-20 top-10 h-72 w-72 bg-fuchsia-500/40" />
+        <div className="blob animate-float-alt right-10 top-1/3 h-80 w-80 bg-orange-500/30" />
+        <div className="blob animate-float-slow bottom-0 left-1/3 h-64 w-64 bg-sky-500/30" />
+        <div className="animate-bob absolute right-[8%] top-28 hidden text-5xl lg:block">🗳️</div>
+        <div className="animate-bob absolute right-[22%] bottom-24 hidden text-4xl [animation-delay:1.5s] lg:block">📣</div>
+
         <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
           <Reveal className="max-w-xl lg:max-w-2xl">
             <h1 className="text-balance font-heading text-4xl font-extrabold leading-[1.08] tracking-tight text-white drop-shadow-md sm:text-5xl lg:text-[3.4rem] lg:leading-[1.03]">
               Best{' '}
-              <span className="bg-linear-to-r from-gold-300 via-gold-400 to-gold-500 bg-clip-text text-transparent">
+              <span className="gradient-text-anim">
                 Political
               </span>
               <br />
-              <span className="bg-linear-to-r from-gold-300 via-gold-400 to-gold-500 bg-clip-text text-transparent">
+              <span className="gradient-text-anim">
                 Marketing
               </span>
               <br />
@@ -44,13 +50,13 @@ export default function Hero() {
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <a
                 href="#services"
-                className="group flex items-center gap-2 rounded-full bg-gold-500 px-6 py-3.5 text-sm font-bold tracking-wide text-green-950 shadow-lg shadow-gold-500/20 transition-transform hover:-translate-y-0.5 hover:bg-gold-400"
+                className="group flex items-center gap-2 rounded-full shine-btn gradient-bg-anim bg-linear-to-r from-gold-400 via-orange-400 to-pink-500 px-6 py-3.5 text-sm font-bold tracking-wide text-green-950 shadow-lg shadow-orange-500/30 transition-transform hover:-translate-y-0.5 "
               >
                 Let&apos;s Plan Your Next Win
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </a>
               <a
-                href="#work"
+                href="#video"
                 className="flex items-center gap-2 rounded-full border border-white/40 bg-green-950/30 px-6 py-3.5 text-sm font-bold tracking-wide text-white backdrop-blur transition-colors hover:border-gold-400/60 hover:bg-white/10"
               >
                 View Our Work
