@@ -9,8 +9,6 @@ const colors = [
   ['#0284c7', '#22d3ee'], // AAP
   ['#ef4444', '#fb923c'], // CPI
   ['#dc2626', '#f43f5e'], // CPI(M)
-  ['#15803d', '#a3e635'], // JD(U)
-  ['#0d9488', '#38bdf8'], // NCP
 ]
 
 export default function Parties() {

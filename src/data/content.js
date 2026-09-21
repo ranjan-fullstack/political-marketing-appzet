@@ -42,8 +42,6 @@ export const parties = [
   { symbol: '🧹', name: 'AAP', full: 'Aam Aadmi Party' },
   { symbol: '🌾', name: 'CPI', full: 'Communist Party of India' },
   { symbol: '☭', name: 'CPI(M)', full: 'Communist Party of India (Marxist)' },
-  { symbol: '🏹', name: 'JD(U)', full: 'Janata Dal (United)' },
-  { symbol: '⏰', name: 'NCP', full: 'Nationalist Congress Party' },
 ]
 
 export const aboutPoints = [
