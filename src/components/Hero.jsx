@@ -11,7 +11,7 @@ export default function Hero() {
       >
         <div className="absolute inset-0">
           <img
-            src="/images/temple.jpeg"
+            src="/images/temple2.png"
             alt=""
             className="h-full w-full object-cover object-[62%_center] sm:object-right"
           />
