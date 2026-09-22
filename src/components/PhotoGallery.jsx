@@ -6,13 +6,13 @@ import Reveal from './Reveal'
 // names (or update the paths below). Until then, each tile falls back to a
 // branded placeholder so the layout still looks complete.
 const photos = [
-  { src: '/images/gallery/rally-1.jpg', caption: 'Public Rally, Bhubaneswar', span: 'sm:col-span-2 sm:row-span-2' },
-  { src: '/images/gallery/door-to-door.jpg', caption: 'Door-to-Door Outreach' },
-  { src: '/images/gallery/war-room.jpg', caption: 'Campaign War Room' },
-  { src: '/images/gallery/volunteers.jpg', caption: 'Volunteer Training' },
-  { src: '/images/gallery/rally-2.jpg', caption: 'Youth Convention' },
-  { src: '/images/gallery/press.jpg', caption: 'Press Conference', span: 'sm:col-span-2' },
-  { src: '/images/gallery/booth.jpg', caption: 'Booth-Level Management' },
+  { src: '/images/public.jpeg', caption: 'Public Rally, Bhubaneswar', span: 'sm:col-span-2 sm:row-span-2' },
+  { src: '/images/gallery/door.jpeg', caption: 'Door-to-Door Outreach' },
+  { src: '/images/gallery/war.jpeg', caption: 'Campaign War Room' },
+  { src: '/images/gallery/vol.jpeg', caption: 'Volunteer Training' },
+  { src: '/images/gallery/youth.jpeg', caption: 'Youth Convention' },
+  { src: '/images/gallery/press.jpeg', caption: 'Press Conference', span: 'sm:col-span-2' },
+  { src: '/images/gallery/booth.jpeg', caption: 'Booth-Level Management' },
 ]
 
 const grads = [
