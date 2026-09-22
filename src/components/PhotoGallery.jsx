@@ -6,13 +6,14 @@ import Reveal from './Reveal'
 // names (or update the paths below). Until then, each tile falls back to a
 // branded placeholder so the layout still looks complete.
 const photos = [
-  { src: '/images/public.jpeg', caption: 'Public Rally, Bhubaneswar', span: 'sm:col-span-2 sm:row-span-2' },
+  { src: '/images/public.jpeg', caption: 'Public Rally, Bhubaneswar' },
   { src: '/images/door.jpeg', caption: 'Door-to-Door Outreach' },
   { src: '/images/war.jpeg', caption: 'Campaign War Room' },
   { src: '/images/vol.jpeg', caption: 'Volunteer Training' },
   { src: '/images/youth.jpeg', caption: 'Youth Convention' },
-  { src: '/images/press.jpeg', caption: 'Press Conference', span: 'sm:col-span-2' },
+  { src: '/images/press.jpeg', caption: 'Press Conference' },
   { src: '/images/booth.jpeg', caption: 'Booth-Level Management' },
+  { src: '/images/voice.jpeg', caption: 'People Voice' },
 ]
 
 const grads = [
@@ -29,7 +30,7 @@ function PhotoTile({ photo, index, onOpen }) {
     <button
       type="button"
       onClick={() => onOpen(index)}
-      className={`group relative aspect-4/3 w-full overflow-hidden rounded-2xl text-left shadow-lg transition-transform duration-300 hover:-translate-y-1.5 ${photo.span ?? ''}`}
+      className="group relative aspect-16/10 w-full overflow-hidden rounded-2xl text-left shadow-lg transition-transform duration-300 hover:-translate-y-1.5"
     >
       {!failed ? (
         <img
@@ -89,9 +90,9 @@ export default function PhotoGallery() {
           </p>
         </Reveal>
 
-        <div className="mt-14 grid grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-5">
+        <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2">
           {photos.map((photo, i) => (
-            <Reveal key={photo.caption} delay={i * 80} className={photo.span ?? ''}>
+            <Reveal key={photo.caption} delay={i * 80}>
               <PhotoTile photo={photo} index={i} onOpen={setActiveIndex} />
             </Reveal>
           ))}
