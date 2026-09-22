@@ -5,7 +5,7 @@ import Reveal from './Reveal'
 // Drop your own .mp4 files into /public/videos using these names.
 const videos = [
   {
-    src: '/videos/campaign-showreel.mp4',
+    src: '/videos/bjd.mp4',
     title: 'Campaign Showreel',
     tag: 'Featured · 2:10',
     icon: Megaphone,
