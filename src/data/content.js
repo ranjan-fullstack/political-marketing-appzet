@@ -36,12 +36,12 @@ export const heroFeatures = [
 ]
 
 export const parties = [
-  { symbol: '🐚', name: 'BJD', full: 'Biju Janata Dal' },
-  { symbol: '🪷', name: 'BJP', full: 'Bharatiya Janata Party' },
-  { symbol: '✋', name: 'INC', full: 'Indian National Congress' },
-  { symbol: '🧹', name: 'AAP', full: 'Aam Aadmi Party' },
-  { symbol: '🌾', name: 'CPI', full: 'Communist Party of India' },
-  { symbol: '☭', name: 'CPI(M)', full: 'Communist Party of India (Marxist)' },
+  { symbol: '🐚', logo: '/images/parties/bjd.png', name: 'BJD', full: 'Biju Janata Dal' },
+  { symbol: '🪷', logo: '/images/parties/bjp.png', name: 'BJP', full: 'Bharatiya Janata Party' },
+  { symbol: '✋', logo: '/images/parties/inc.png', name: 'INC', full: 'Indian National Congress' },
+  { symbol: '🧹', logo: '/images/parties/aap.png', name: 'AAP', full: 'Aam Aadmi Party' },
+  { symbol: '🌾', logo: '/images/parties/cpi.png', name: 'CPI', full: 'Communist Party of India' },
+  { symbol: '☭', logo: '/images/parties/cpim.png', name: 'CPI(M)', full: 'Communist Party of India (Marxist)' },
 ]
 
 export const aboutPoints = [

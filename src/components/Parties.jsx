@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { parties } from '../data/content'
 import Reveal from './Reveal'
 
@@ -10,6 +11,23 @@ const colors = [
   ['#ef4444', '#fb923c'], // CPI
   ['#dc2626', '#f43f5e'], // CPI(M)
 ]
+
+function PartyBadge({ party }) {
+  const [failed, setFailed] = useState(false)
+
+  if (!failed && party.logo) {
+    return (
+      <img
+        src={party.logo}
+        alt={`${party.full} logo`}
+        onError={() => setFailed(true)}
+        className="h-full w-full rounded-full object-cover"
+      />
+    )
+  }
+
+  return <span className="party-symbol">{party.symbol}</span>
+}
 
 export default function Parties() {
   return (
@@ -29,20 +47,20 @@ export default function Parties() {
         </Reveal>
 
         <div className="mt-12 grid grid-cols-4 gap-4 sm:gap-6 md:grid-cols-8">
-          {parties.map(({ symbol, name, full }, i) => (
-            <Reveal key={name} delay={i * 60}>
+          {parties.map((party, i) => (
+            <Reveal key={party.name} delay={i * 60}>
               <div
                 className="party-card group flex flex-col items-center gap-3 rounded-2xl border border-black/5 bg-white p-4 text-center shadow-sm sm:p-5"
                 style={{ '--c1': colors[i % 8][0], '--c2': colors[i % 8][1], '--i': i }}
               >
-                <span className="party-badge relative flex h-14 w-14 items-center justify-center sm:h-16 sm:w-16" title={full}>
+                <span className="party-badge relative flex h-14 w-14 items-center justify-center sm:h-16 sm:w-16" title={party.full}>
                   <span className="party-ring absolute -inset-[3px] rounded-full" aria-hidden="true" />
                   <span className="party-glow absolute -inset-1 rounded-full blur-md" aria-hidden="true" />
-                  <span className="party-face relative flex h-full w-full items-center justify-center rounded-full bg-white text-2xl sm:text-3xl">
-                    <span className="party-symbol">{symbol}</span>
+                  <span className="party-face relative flex h-full w-full items-center justify-center overflow-hidden rounded-full bg-white text-2xl sm:text-3xl">
+                    <PartyBadge party={party} />
                   </span>
                 </span>
-                <span className="party-name text-xs font-bold sm:text-sm">{name}</span>
+                <span className="party-name text-xs font-bold sm:text-sm">{party.name}</span>
               </div>
             </Reveal>
           ))}
