@@ -4,6 +4,7 @@ import MenuPanel from './components/MenuPanel'
 import QuickNav from './components/QuickNav'
 import Hero from './components/Hero'
 import VideoShowcase from './components/VideoShowcase'
+import PhotoGallery from './components/PhotoGallery'
 import Parties from './components/Parties'
 import About from './components/About'
 import Services from './components/Services'
@@ -56,6 +57,7 @@ function App() {
       <main>
         <Hero />
         <VideoShowcase />
+        <PhotoGallery />
         <Parties />
         <About />
         <Services />
