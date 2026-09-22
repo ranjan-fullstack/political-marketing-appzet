@@ -12,14 +12,14 @@ const videos = [
     grad: 'from-fuchsia-600 via-purple-700 to-indigo-900',
   },
   {
-    src: '/videos/rally-highlights.mp4',
+    src: '/videos/bjp.mp4',
     title: 'Rally Highlights',
     tag: 'Ground Campaign · 1:24',
     icon: Users,
     grad: 'from-orange-500 via-rose-600 to-pink-800',
   },
   {
-    src: '/videos/voter-awareness.mp4',
+    src: '/videos/bjd2.mp4',
     title: 'Voter Awareness Film',
     tag: 'Digital Campaign · 0:58',
     icon: Vote,
