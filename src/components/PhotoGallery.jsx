@@ -7,12 +7,12 @@ import Reveal from './Reveal'
 // branded placeholder so the layout still looks complete.
 const photos = [
   { src: '/images/public.jpeg', caption: 'Public Rally, Bhubaneswar', span: 'sm:col-span-2 sm:row-span-2' },
-  { src: '/images/gallery/door.jpeg', caption: 'Door-to-Door Outreach' },
-  { src: '/images/gallery/war.jpeg', caption: 'Campaign War Room' },
-  { src: '/images/gallery/vol.jpeg', caption: 'Volunteer Training' },
-  { src: '/images/gallery/youth.jpeg', caption: 'Youth Convention' },
-  { src: '/images/gallery/press.jpeg', caption: 'Press Conference', span: 'sm:col-span-2' },
-  { src: '/images/gallery/booth.jpeg', caption: 'Booth-Level Management' },
+  { src: '/images/door.jpeg', caption: 'Door-to-Door Outreach' },
+  { src: '/images/war.jpeg', caption: 'Campaign War Room' },
+  { src: '/images/vol.jpeg', caption: 'Volunteer Training' },
+  { src: '/images/youth.jpeg', caption: 'Youth Convention' },
+  { src: '/images/press.jpeg', caption: 'Press Conference', span: 'sm:col-span-2' },
+  { src: '/images/booth.jpeg', caption: 'Booth-Level Management' },
 ]
 
 const grads = [
