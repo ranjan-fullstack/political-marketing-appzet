@@ -29,22 +29,22 @@ export default function Contact() {
 
           <div className="mt-10 space-y-5">
             <a
-              href="tel:+919876543210"
+              href="tel:+919692428905"
               className="flex items-center gap-4 text-white/80 hover:text-white"
             >
               <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10">
                 <Phone className="h-4 w-4 text-gold-400" />
               </span>
-              <span className="text-sm font-medium">+91 98765 43210</span>
+              <span className="text-sm font-medium">+91 9692428905</span>
             </a>
             <a
-              href="mailto:hello@appzet.com"
+              href="mailto:marketing@appzetsbilling.com"
               className="flex items-center gap-4 text-white/80 hover:text-white"
             >
               <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10">
                 <Mail className="h-4 w-4 text-gold-400" />
               </span>
-              <span className="text-sm font-medium">hello@appzet.com</span>
+              <span className="text-sm font-medium">marketing@appzetsbilling.com</span>
             </a>
             <div className="flex items-center gap-4 text-white/80">
               <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10">
